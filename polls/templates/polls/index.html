@@ -1,11 +1,24 @@
 {% load static %}
-<link rel="stylesheet" href="{% static "polls/style.css" %}">
-{%if lastest_question_list %}
-    <ul>
-        {%for question in lastest_question_list%}
-        <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
-        {% endfor %}
-    </ul>
-{%else%}
-    <p>No polls are available.</p>
-{% endif %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Estres</title>
+    <link rel="stylesheet" href="{% static "polls/index.css" %}">
+</head>
+<body>
+    <nav class="nav-exam">
+        <h1>EXAMEN</h1>
+    </nav>
+    <div>
+        <h2>Seleciona el modo</h2>
+        <p>A continuación se presentarán preguntas de historia general, selecciona la opción que consideres <br> correcta, el tiempo aproximado de la encuesta es de 25 minutos. Puedes abandonar la encuesta en el momento que desees. <br> (no esta permitido el uso de celular o cualquier otro dispositivo)<br></p>
+        <p>Debes esperar que el instructor te diga cual modo elegir</p>
+        
+        <button type="button"><a href="one">1</a></button>
+        <button type="button"> <a href="two">2</a> </button> 
+    </div>
+    
+</body>
+</html>
